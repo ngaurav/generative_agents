@@ -217,10 +217,11 @@ def GPT_request(prompt, gpt_parameter):
                 frequency_penalty=gpt_parameter["frequency_penalty"],
                 presence_penalty=gpt_parameter["presence_penalty"],
                 stream=gpt_parameter["stream"],
-                stop=gpt_parameter["stop"],)
-    return response.choices[0].text
-  except: 
-    print ("TOKEN LIMIT EXCEEDED")
+                stop=gpt_parameter["stop"],
+    )
+    return response["choices"][0]["message"]["content"]
+  except Exception as e:
+    print ("TOKEN LIMIT EXCEEDED", e)
     return "TOKEN LIMIT EXCEEDED"
 
 
