@@ -208,9 +208,9 @@ def GPT_request(prompt, gpt_parameter):
   """
   temp_sleep()
   try: 
-    response = openai.Completion.create(
+    response = openai.ChatCompletion.create(
                 model=gpt_parameter["engine"],
-                prompt=prompt,
+                messages=[{"role": "user", "content": prompt}],
                 temperature=gpt_parameter["temperature"],
                 max_tokens=gpt_parameter["max_tokens"],
                 top_p=gpt_parameter["top_p"],
