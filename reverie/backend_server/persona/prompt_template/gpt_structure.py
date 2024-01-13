@@ -13,7 +13,7 @@ from utils import *
 
 openai.api_key = openai_api_key
 
-def temp_sleep(seconds=1):
+def temp_sleep(seconds=0.1):
   time.sleep(seconds)
 
 def ChatGPT_single_request(prompt): 
@@ -217,8 +217,7 @@ def GPT_request(prompt, gpt_parameter):
                 frequency_penalty=gpt_parameter["frequency_penalty"],
                 presence_penalty=gpt_parameter["presence_penalty"],
                 stream=gpt_parameter["stream"],
-                stop=gpt_parameter["stop"],
-    )
+                stop=gpt_parameter["stop"],)
     return response.choices[0].text
   except: 
     print ("TOKEN LIMIT EXCEEDED")
@@ -284,7 +283,7 @@ def get_embedding(text, model="text-embedding-ada-002"):
 
 
 if __name__ == '__main__':
-  gpt_parameter = {"engine": "gpt-3.5-turbo", "max_tokens": 1000, 
+  gpt_parameter = {"engine": "gpt-3.5-turbo", "max_tokens": 50, 
                    "temperature": 0, "top_p": 1, "stream": False,
                    "frequency_penalty": 0, "presence_penalty": 0, 
                    "stop": ['"']}
