@@ -33,19 +33,27 @@
   "daily_req": [], 
   "f_daily_schedule": [],
   "f_daily_schedule_hourly_org": [],
-  "act_address": null, 
-  "act_start_time": null, 
-  "act_duration": null, 
-  "act_description": null, 
-  "act_pronunciatio": null, 
-  "act_event": ["Maria Lopez", null, null], 
-  "act_obj_description": null, 
-  "act_obj_pronunciatio": null, 
-  "act_obj_event": [null, null, null], 
+  "act_address": "the Ville:Dorm for Oak Hill College:Maria Lopez's room:bed",
+  "act_start_time": "February 13, 2023, 02:00:00",
+  "act_duration": 420,
+  "act_description": "sleeping",
+  "act_pronunciatio": "\ud83d\udca4",
+  "act_event": [
+    "Maria Lopez",
+    "is",
+    "sleep"
+  ],
+  "act_obj_description": "being used",
+  "act_obj_pronunciatio": "\ud83e\udd37\u200d\u2640",
+  "act_obj_event": [
+    "bed",
+    "be",
+    "used"
+  ],
   "chatting_with": null, 
   "chat": null,
   "chatting_with_buffer": {}, 
   "chatting_end_time": null,
-  "act_path_set": false, 
+  "act_path_set": true, 
   "planned_path": []
 }

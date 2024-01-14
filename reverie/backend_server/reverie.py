@@ -336,6 +336,7 @@ class ReverieServer:
           # We first move our personas in the backend environment to match 
           # the frontend environment. 
           for persona_name, persona in self.personas.items(): 
+            print(f"#$#$#$#$ {persona_name}")
             # <curr_tile> is the tile that the persona was at previously. 
             curr_tile = self.personas_tile[persona_name]
             # <new_tile> is the tile that the persona will move to right now,

@@ -426,7 +426,7 @@ def run_gpt_prompt_task_decomp(persona,
     fs = ["asleep"]
     return fs
 
-  gpt_param = {"engine": "gpt-3.5-turbo", "max_tokens": 1000, 
+  gpt_param = {"engine": "gpt-3.5-turbo", "max_tokens": 2000, 
              "temperature": 0, "top_p": 1, "stream": False,
              "frequency_penalty": 0, "presence_penalty": 0, "stop": None}
   prompt_template = "persona/prompt_template/v2/task_decomp_v3.txt"

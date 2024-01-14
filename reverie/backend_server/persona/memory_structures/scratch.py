@@ -541,6 +541,7 @@ class Scratch:
       Boolean [True]: Action has finished.
       Boolean [False]: Action has not finished and is still ongoing.
     """
+    print (f"+_+_+_+_ {self.name}")
     if not self.act_address: 
       return True
       
@@ -552,6 +553,9 @@ class Scratch:
         x = x.replace(second=0)
         x = (x + datetime.timedelta(minutes=1))
       end_time = (x + datetime.timedelta(minutes=self.act_duration))
+      print (self.act_duration)
+      print (self.curr_time.strftime("%H:%M:%S"))
+      print (end_time.strftime("%H:%M:%S"))
 
     if end_time.strftime("%H:%M:%S") == self.curr_time.strftime("%H:%M:%S"): 
       return True
